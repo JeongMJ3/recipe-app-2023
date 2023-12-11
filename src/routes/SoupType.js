@@ -1,12 +1,24 @@
 import React from 'react';
+import { collection, getDocs } from "firebase/firestore"; 
+import { db } from "../firebase-config.js"
 import recipe_list from '../recipe_list'
 import Recipe from '../components/Recipe'
-import './Kor_food.css';
+import './SoupType.css';
 
-class Kor_food extends React.Component {
+class SoupType extends React.Component {
   state = {
     isLoading: true,
     recipes: [],
+    docs: []
+  };
+
+  getDB = async () => {
+    const querySnapshot = await getDocs(collection(db, "soup"));
+    const docs = [];
+    querySnapshot.forEach((doc) => {
+      docs.push(doc.data())
+    })
+    this.setState({docs: docs, isLoading: false});
   };
 
   getRecipe = async () => {
@@ -16,11 +28,11 @@ class Kor_food extends React.Component {
   };
 
   componentDidMount(){
-    this.getRecipe();
+    this.getDB();
   }
-  
+    
   render() {
-    const { isLoading, recipes } = this.state;
+    const { isLoading, docs } = this.state;
     return (
       <section className="container">
         {isLoading ? (
@@ -28,18 +40,19 @@ class Kor_food extends React.Component {
             <span className="loader__text">'Loading...'</span>
           </div>
           ) : (
-            <div className="recipes">
+          <div className="recipes">
+            {/* {console.log(docs)} */}
               
-            {recipes.map((recipe) => (
+            {docs.map((recipe) => (
               <Recipe
-                key = {recipe.id}
-                id = {recipe.id}
+                // key = {recipe.id}
+                // id = {recipe.id}
                 name = {recipe.name}
                 image = {recipe.image}
                 ingredients = {recipe.ingredients}
                 directions = {recipe.directions}
               />
-          ))}
+            ))}
           </div>
           )}
       </section>
@@ -47,5 +60,5 @@ class Kor_food extends React.Component {
   }
 }
  
+export default SoupType;
 
-export default Kor_food;
