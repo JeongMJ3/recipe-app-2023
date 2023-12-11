@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/JeongMJ3/recipe-app-2023.git/static/css/main.63a49831.css",
+    "main.js": "/JeongMJ3/recipe-app-2023.git/static/js/main.8dfed3ed.js",
+    "index.html": "/JeongMJ3/recipe-app-2023.git/index.html",
+    "main.63a49831.css.map": "/JeongMJ3/recipe-app-2023.git/static/css/main.63a49831.css.map",
+    "main.8dfed3ed.js.map": "/JeongMJ3/recipe-app-2023.git/static/js/main.8dfed3ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63a49831.css",
+    "static/js/main.8dfed3ed.js"
+  ]
+}
