@@ -62,10 +62,10 @@ const clearBt = () => {
 }
 
 return (
-    <div className="Home_1">
+    <div className="AddRecipe_1">
         <h1>This is AddRecipe</h1>
             <div>
-                <label>카테고리</label>
+                <label>카테고리   </label>
                 <select id="category" name="category" onChange={onChange}>
                     <option value="none">=== Select ===</option>
                     <option value="rice">rice</option>

@@ -2,6 +2,14 @@
   padding-left: 150px;
   padding-top: 30px;
 }
+.detail_box{
+  background-color: white;
+  width: 1100px;
+  padding-bottom: 30px;
+  
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+    0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
 .recipes2 .recipe2 {
   background-color: white;
   margin-bottom: 70px;
@@ -18,14 +26,16 @@
   top: 0px;
   max-width: 500px;
   width: 100%;
-  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3),
     0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
 .recipe2 .recipe2__name {
   margin-bottom: 5px;
-  font-size: 24px;
+  margin-left: 30px;
+  font-size: 40px;
   color: #2c2c2c;
 }
 
@@ -36,4 +46,29 @@
   display: flex;
   flex-wrap: wrap;
   margin: 5px 0px;
+}
+
+.recipe2 .recipe2__igredient{
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+      0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 30px;
+  border-radius: 20px / 20px;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.recipe2 .recipe2__direction{
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+      0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  padding: 30px;
+  border-radius: 20px / 20px;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1000px;
 }

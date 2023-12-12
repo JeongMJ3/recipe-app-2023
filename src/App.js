@@ -17,7 +17,7 @@ function App(){
     <div>
       <Navigation />
 
-      <Routes>
+      <Routes basename={process.env.PUBLIC_URL}>
         <Route path="/" exact={true} element={<Home />} />
         <Route path="/add" element={<AddRecipe />} />
         <Route path="/rice" element={<RiceType />} />        
@@ -31,5 +31,6 @@ function App(){
     </div>
   );
 }
+
 
 export default App;   

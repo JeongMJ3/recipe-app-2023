@@ -7,12 +7,14 @@ function Detail(){
     const state = locatiuon.state
     console.log(state);
     return (
-        <div className="recipe2">            
+        <div className="recipe2">  
+        <div className="detail_box">
             <img src={state.image} alt={state.name} title={state.name} />
             <div className="recipe2__data">
-                <h3 className="recipe2__name">{state.name}</h3>
-                <h4 className="de_ingre">#   재료</h4>
-                <ul className="recipe2__infos">
+                <h2 className="recipe2__name">{state.name}</h2>
+                
+                <ul className="recipe2__igredient">
+                    <h3 className="de_ingre">#   재료</h3>
                     {state.ingredients.map((info, index) => {
                         return (
                         <li key={index} className="recipe2__info">
@@ -21,8 +23,9 @@ function Detail(){
                         );
                     })}
                 </ul>
-                <h4 className="de_direc">#   조리법</h4>
-                <ul className="recipe2__infos">
+                
+                <ul className="recipe2__direction">
+                    <h3 className="de_direc">#   조리법</h3>
                     {state.directions.map((info2, index2) => {
                         return (
                         <li key={index2} className="recipe2__info2">
@@ -32,6 +35,7 @@ function Detail(){
                     })}
                 </ul>
             </div>
+            </div>          
         </div>
     );
 }
